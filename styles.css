@@ -1,0 +1,254 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+h1 {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+    margin: 20px auto;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+ 
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  header .logo {
+    width: 150px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  
+  .hero {
+    background: url('images/bgpt.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero .cta-button {
+    background-color: #f4a261;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .hero .cta-button:hover {
+    background-color: #e76f51;
+  }
+  
+
+  .featured-products {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .featured-products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px; 
+    justify-items: center;
+  }
+  
+  .product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .product:hover {
+    transform: translateY(-10px); 
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product h3 {
+    margin: 15px 0;
+    font-size: 1.25rem;
+  }
+  
+  .product p {
+    font-size: 1rem;
+    color: #f4a261;
+    margin-bottom: 15px;
+  }
+  
+  .product .buy-button {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .product .buy-button:hover {
+    background-color: #264653;
+  }
+  
+
+  .about {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 20px;
+  }
+  
+
+  .contact {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact p {
+    font-size: 1.1rem;
+  }
+  
+ 
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.25rem;
+  }
+  
+  footer .social-links a:hover {
+    color: #f4a261;
+  }
+  
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .featured-products h2 {
+      font-size: 1.75rem;
+    }
+  
+    .product-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .product h3 {
+      font-size: 1.125rem;
+    }
+  
+    .product p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-grid {
+      grid-template-columns: 1fr; 
+    }
+  
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+  
+    .product h3 {
+      font-size: 1rem;
+    }
+  
+    .product p {
+      font-size: 0.8rem;
+    }
+  }
+  
+

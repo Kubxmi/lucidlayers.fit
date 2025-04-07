@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up / Log In | LucidLayers</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function toggleForm(formType) {
+      if (formType === "signUp") {
+        document.getElementById("signUpForm").style.display = "block";
+        document.getElementById("logInForm").style.display = "none";
+      } else {
+        document.getElementById("signUpForm").style.display = "none";
+        document.getElementById("logInForm").style.display = "block";
+      }
+    }
+
+    function validateSignUp() {
+      const email = document.getElementById("signUpEmail").value;
+      const password = document.getElementById("signUpPassword").value;
+      const errorMessage = document.getElementById("signUpError");
+
+      if (!email.includes("@") || email.trim() === "") {
+        errorMessage.textContent = "Please enter a valid email address.";
+        return false;
+      } else if (password.length < 6) {
+        errorMessage.textContent = "Password must be at least 6 characters.";
+        return false;
+      }
+
+      errorMessage.textContent = "";
+      return true;
+    }
+
+    function validateLogIn() {
+      const email = document.getElementById("logInEmail").value;
+      const password = document.getElementById("logInPassword").value;
+      const errorMessage = document.getElementById("logInError");
+
+      if (!email.includes("@") || email.trim() === "") {
+        errorMessage.textContent = "Please enter a valid email address.";
+        return false;
+      } else if (password.trim() === "") {
+        errorMessage.textContent = "Password cannot be empty.";
+        return false;
+      }
+
+      errorMessage.textContent = "";
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img src="images/Lucid Layers.jpg" alt="LucidLayers Logo" id="logo">
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="lucidlayers.fit.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="form.html" aria-current="page">Sign Up / Log In</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Sign Up / Log In</h1>
+    <div class="form-toggle">
+      <button onclick="toggleForm('signUp')">Sign Up</button>
+      <button onclick="toggleForm('logIn')">Log In</button>
+    </div>
+
+    <!-- Sign Up Form -->
+    <section id="signUpForm" style="display: none;">
+      <h2>Sign Up</h2>
+      <form onsubmit="return validateSignUp()">
+        <label for="signUpEmail">Email Address:</label>
+        <input type="email" id="signUpEmail" name="email" required>
+        
+        <label for="signUpPassword">Password:</label>
+        <input type="password" id="signUpPassword" name="password" required>
+
+        <span id="signUpError" style="color:red;"></span>
+        <button type="submit">Create Account</button>
+      </form>
+    </section>
+
+    <!-- Log In Form -->
+    <section id="logInForm" style="display: none;">
+      <h2>Log In</h2>
+      <form onsubmit="return validateLogIn()">
+        <label for="logInEmail">Email Address:</label>
+        <input type="email" id="logInEmail" name="email" required>
+        
+        <label for="logInPassword">Password:</label>
+        <input type="password" id="logInPassword" name="password" required>
+
+        <span id="logInError" style="color:red;"></span>
+        <button type="submit">Log In</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
